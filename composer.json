@@ -1,0 +1,11 @@
+{
+  "require": {
+    "igorsimdyanov/pager": "^1.0",
+    "smarty/smarty": "3.*"
+  },
+  "autoload":{
+    "psr-4": {
+      "App\\": "src"
+    }
+  }
+}

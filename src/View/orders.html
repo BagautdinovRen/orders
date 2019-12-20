@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script src="public/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <script>
+        $(function change_text(callback, text = 'Доступно после регистрации') {
+            $("h1").html(text);
+        });
+    </script>
+    <style>
+        table, tr, td{
+            border: 1px solid #000;
+        }
+    </style>
+    <h1>{$title|default:'Что-то'}</h1>
+    {if !empty($orders)}
+        <table>
+            <tr>
+                <td>Покупатель</td>
+                <td>Сумма заказа</td>
+            </tr>
+            {foreach $orders as $order}
+               <tr>
+                   <td>{$order.created_by}</td>
+                   <td>{$order.total}</td>
+               </tr>
+            {/foreach}
+        </table>
+    {else}
+        <p>Список заказов пуст!</p>
+    {/if}
+</body>
+</html>
