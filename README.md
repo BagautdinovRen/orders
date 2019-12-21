@@ -1,0 +1,1 @@
+testing PDO + smarty + composer
